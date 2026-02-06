@@ -1,0 +1,11 @@
+# Robots.txt for purestpeptides.com
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://purestpeptides.com/sitemap.xml
+
+# Disallow admin or private areas (if any)
+Disallow: /api/
+Disallow: /admin/
