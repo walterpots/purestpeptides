@@ -7,6 +7,7 @@ import BlogPage from './pages/BlogPage';
 import ArticlePage from './pages/ArticlePage';
 import PeptidesPage from './pages/PeptidesPage';
 import AboutPage from './pages/AboutPage';
+import FAQPage from './pages/FAQPage';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
               <Route path="/blog" element={<BlogPage />} />
               <Route path="/blog/:slug" element={<ArticlePage />} />
               <Route path="/peptides" element={<PeptidesPage />} />
+              <Route path="/faq" element={<FAQPage />} />
               <Route path="/about" element={<AboutPage />} />
             </Routes>
           </main>

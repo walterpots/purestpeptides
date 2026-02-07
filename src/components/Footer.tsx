@@ -102,6 +102,14 @@ const Footer = () => {
               </li>
               <li>
                 <Link
+                  to="/faq"
+                  className="text-slate-400 hover:text-teal-400 transition-colors text-sm"
+                >
+                  FAQ
+                </Link>
+              </li>
+              <li>
+                <Link
                   to="/about"
                   className="text-slate-400 hover:text-teal-400 transition-colors text-sm"
                 >
@@ -129,6 +137,14 @@ const Footer = () => {
                   className="text-slate-400 hover:text-teal-400 transition-colors text-sm"
                 >
                   BPC-157 Guide
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/blog/tb-500-thymosin-beta-4-guide"
+                  className="text-slate-400 hover:text-teal-400 transition-colors text-sm"
+                >
+                  TB-500 Guide
                 </Link>
               </li>
               <li>

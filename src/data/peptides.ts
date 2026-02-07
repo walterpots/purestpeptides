@@ -61,6 +61,7 @@ export const peptides: Peptide[] = [
       'Anti-inflammatory investigations',
       'Tissue remodeling research',
     ],
+    articleSlug: 'tb-500-thymosin-beta-4-guide',
     shopUrl: 'https://peptidefoundry.com/products/tb-500',
   },
   {
