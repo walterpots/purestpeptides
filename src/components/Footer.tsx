@@ -102,6 +102,14 @@ const Footer = () => {
               </li>
               <li>
                 <Link
+                  to="/quality"
+                  className="text-slate-400 hover:text-teal-400 transition-colors text-sm"
+                >
+                  Quality Standards
+                </Link>
+              </li>
+              <li>
+                <Link
                   to="/about"
                   className="text-slate-400 hover:text-teal-400 transition-colors text-sm"
                 >
