@@ -110,6 +110,14 @@ const Footer = () => {
               </li>
               <li>
                 <Link
+                  to="/coa-lookup"
+                  className="text-slate-400 hover:text-teal-400 transition-colors text-sm"
+                >
+                  Verify COA
+                </Link>
+              </li>
+              <li>
+                <Link
                   to="/about"
                   className="text-slate-400 hover:text-teal-400 transition-colors text-sm"
                 >

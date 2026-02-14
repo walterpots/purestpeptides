@@ -23,6 +23,7 @@ const Header = () => {
     { path: '/peptides', label: 'Peptides' },
     { path: '/blog', label: 'Resources' },
     { path: '/quality', label: 'Quality' },
+    { path: '/coa-lookup', label: 'Verify COA' },
     { path: '/about', label: 'About' },
     { path: '/contact', label: 'Contact' },
   ];
