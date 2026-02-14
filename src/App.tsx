@@ -9,6 +9,7 @@ import PeptidesPage from './pages/PeptidesPage';
 import AboutPage from './pages/AboutPage';
 import ContactPage from './pages/ContactPage';
 import QualityPage from './pages/QualityPage';
+import FAQPage from './pages/FAQPage';
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
               <Route path="/about" element={<AboutPage />} />
               <Route path="/contact" element={<ContactPage />} />
               <Route path="/quality" element={<QualityPage />} />
+              <Route path="/faq" element={<FAQPage />} />
             </Routes>
           </main>
           <Footer />
