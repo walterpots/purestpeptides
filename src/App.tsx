@@ -10,6 +10,7 @@ import PeptideDetailPage from './pages/PeptideDetailPage';
 import AboutPage from './pages/AboutPage';
 import ContactPage from './pages/ContactPage';
 import QualityPage from './pages/QualityPage';
+import ComparisonPage from './pages/ComparisonPage';
 import ShippingPage from './pages/ShippingPage';
 import PrivacyPage from './pages/PrivacyPage';
 import TermsPage from './pages/TermsPage';
@@ -31,6 +32,7 @@ function App() {
               <Route path="/about" element={<AboutPage />} />
               <Route path="/contact" element={<ContactPage />} />
               <Route path="/quality" element={<QualityPage />} />
+              <Route path="/compare" element={<ComparisonPage />} />
               <Route path="/shipping" element={<ShippingPage />} />
               <Route path="/privacy" element={<PrivacyPage />} />
               <Route path="/terms" element={<TermsPage />} />

@@ -94,6 +94,14 @@ const Footer = () => {
               </li>
               <li>
                 <Link
+                  to="/compare"
+                  className="text-slate-400 hover:text-teal-400 transition-colors text-sm"
+                >
+                  Compare Peptides
+                </Link>
+              </li>
+              <li>
+                <Link
                   to="/blog"
                   className="text-slate-400 hover:text-teal-400 transition-colors text-sm"
                 >
