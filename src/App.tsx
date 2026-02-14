@@ -6,6 +6,7 @@ import HomePage from './pages/HomePage';
 import BlogPage from './pages/BlogPage';
 import ArticlePage from './pages/ArticlePage';
 import PeptidesPage from './pages/PeptidesPage';
+import PeptideDetailPage from './pages/PeptideDetailPage';
 import AboutPage from './pages/AboutPage';
 import ContactPage from './pages/ContactPage';
 import QualityPage from './pages/QualityPage';
@@ -23,6 +24,7 @@ function App() {
               <Route path="/blog" element={<BlogPage />} />
               <Route path="/blog/:slug" element={<ArticlePage />} />
               <Route path="/peptides" element={<PeptidesPage />} />
+              <Route path="/peptides/:slug" element={<PeptideDetailPage />} />
               <Route path="/about" element={<AboutPage />} />
               <Route path="/contact" element={<ContactPage />} />
               <Route path="/quality" element={<QualityPage />} />
