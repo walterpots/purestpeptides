@@ -94,6 +94,14 @@ const Footer = () => {
               </li>
               <li>
                 <Link
+                  to="/compare"
+                  className="text-slate-400 hover:text-teal-400 transition-colors text-sm"
+                >
+                  Compare Peptides
+                </Link>
+              </li>
+              <li>
+                <Link
                   to="/blog"
                   className="text-slate-400 hover:text-teal-400 transition-colors text-sm"
                 >
@@ -132,6 +140,14 @@ const Footer = () => {
                   Contact
                 </Link>
               </li>
+              <li>
+                <Link
+                  to="/faq"
+                  className="text-slate-400 hover:text-teal-400 transition-colors text-sm"
+                >
+                  FAQ
+                </Link>
+              </li>
             </ul>
           </div>
 
@@ -163,36 +179,70 @@ const Footer = () => {
                   GLP-1 Peptides Explained
                 </Link>
               </li>
+              <li>
+                <Link
+                  to="/blog/tb-500-guide"
+                  className="text-slate-400 hover:text-teal-400 transition-colors text-sm"
+                >
+                  TB-500 Research Guide
+                </Link>
+              </li>
             </ul>
           </div>
 
-          {/* Shop */}
+          {/* Policies */}
           <div>
-            <h3 className="font-semibold text-white mb-4">Shop Peptides</h3>
-            <p className="text-slate-400 text-sm mb-4">
-              Premium research peptides available at our partner store.
-            </p>
-            <a
-              href="https://peptidefoundry.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 text-teal-400 hover:text-teal-300 transition-colors text-sm font-medium"
-            >
-              Visit Peptide Foundry
-              <svg
-                className="w-4 h-4"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
+            <h3 className="font-semibold text-white mb-4">Policies</h3>
+            <ul className="space-y-3">
+              <li>
+                <Link
+                  to="/shipping"
+                  className="text-slate-400 hover:text-teal-400 transition-colors text-sm"
+                >
+                  Shipping & Returns
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/privacy"
+                  className="text-slate-400 hover:text-teal-400 transition-colors text-sm"
+                >
+                  Privacy Policy
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/terms"
+                  className="text-slate-400 hover:text-teal-400 transition-colors text-sm"
+                >
+                  Terms of Service
+                </Link>
+              </li>
+            </ul>
+            <div className="mt-6 pt-4 border-t border-navy-800">
+              <h4 className="font-semibold text-white text-sm mb-2">Shop</h4>
+              <a
+                href="https://peptidefoundry.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 text-teal-400 hover:text-teal-300 transition-colors text-sm font-medium"
               >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
-                />
-              </svg>
-            </a>
+                Peptide Foundry
+                <svg
+                  className="w-4 h-4"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                  />
+                </svg>
+              </a>
+            </div>
           </div>
         </div>
 
