@@ -1,24 +1,27 @@
 import { Link } from 'react-router-dom';
 
 interface PeptideCardProps {
+  slug: string;
   name: string;
   category: string;
   description: string;
   benefits: string[];
   articleSlug?: string;
-  shopUrl?: string;
 }
 
 const PeptideCard = ({
+  slug,
   name,
   category,
   description,
   benefits,
   articleSlug,
-  shopUrl,
 }: PeptideCardProps) => {
   return (
-    <div className="group bg-white rounded-2xl p-6 shadow-sm border border-slate-200 hover:shadow-lg hover:border-teal-200 transition-all duration-300">
+    <Link
+      to={`/peptides/${slug}`}
+      className="group bg-white rounded-2xl p-6 shadow-sm border border-slate-200 hover:shadow-lg hover:border-teal-200 transition-all duration-300 block"
+    >
       {/* Category Badge */}
       <div className="mb-4">
         <span className="inline-block px-3 py-1 bg-teal-50 text-teal-700 text-xs font-medium rounded-full">
@@ -63,28 +66,31 @@ const PeptideCard = ({
         </ul>
       </div>
 
-      {/* Actions */}
-      <div className="flex gap-3 pt-4 border-t border-slate-100">
+      {/* Action Footer */}
+      <div className="flex items-center justify-between pt-4 border-t border-slate-100">
+        <span className="text-sm font-medium text-teal-600 group-hover:text-teal-700 transition-colors flex items-center gap-1.5">
+          View Details
+          <svg
+            className="w-4 h-4 group-hover:translate-x-1 transition-transform"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M9 5l7 7-7 7"
+            />
+          </svg>
+        </span>
         {articleSlug && (
-          <Link
-            to={`/blog/${articleSlug}`}
-            className="flex-1 px-4 py-2.5 text-center text-sm font-medium text-navy-700 bg-slate-100 rounded-lg hover:bg-slate-200 transition-colors"
-          >
-            Learn More
-          </Link>
-        )}
-        {shopUrl && (
-          <a
-            href={shopUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex-1 px-4 py-2.5 text-center text-sm font-medium text-white bg-gradient-to-r from-navy-700 to-navy-800 rounded-lg hover:from-navy-800 hover:to-navy-900 transition-all"
-          >
-            Shop Now
-          </a>
+          <span className="text-xs text-slate-500">
+            Article available
+          </span>
         )}
       </div>
-    </div>
+    </Link>
   );
 };
 
