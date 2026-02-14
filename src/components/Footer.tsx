@@ -124,6 +124,14 @@ const Footer = () => {
                   Contact
                 </Link>
               </li>
+              <li>
+                <Link
+                  to="/faq"
+                  className="text-slate-400 hover:text-teal-400 transition-colors text-sm"
+                >
+                  FAQ
+                </Link>
+              </li>
             </ul>
           </div>
 
@@ -153,6 +161,14 @@ const Footer = () => {
                   className="text-slate-400 hover:text-teal-400 transition-colors text-sm"
                 >
                   GLP-1 Peptides Explained
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/blog/tb-500-guide"
+                  className="text-slate-400 hover:text-teal-400 transition-colors text-sm"
+                >
+                  TB-500 Research Guide
                 </Link>
               </li>
             </ul>

@@ -240,6 +240,141 @@ export const articles: Article[] = [
       <p>For researchers studying metabolic disease, understanding the nuances between semaglutide, tirzepatide, and emerging compounds is essential for designing informative studies and interpreting results in the context of this rapidly advancing field.</p>
     `,
   },
+  {
+    slug: 'tb-500-guide',
+    title: 'TB-500 (Thymosin Beta-4): Complete Research Guide',
+    excerpt:
+      'Explore the science behind TB-500, a synthetic fragment of thymosin beta-4 studied for its remarkable effects on wound healing, tissue repair, and cellular migration.',
+    category: 'Peptide Guides',
+    readTime: '8 min read',
+    date: 'February 1, 2025',
+    publishedTime: '2025-02-01T00:00:00Z',
+    tags: ['TB-500', 'thymosin beta-4', 'wound healing', 'tissue repair', 'regeneration'],
+    toc: [
+      { id: 'what-is-tb-500', title: 'What is TB-500?', level: 2 },
+      { id: 'thymosin-beta-4', title: 'Understanding Thymosin Beta-4', level: 2 },
+      { id: 'mechanisms-of-action', title: 'Mechanisms of Action', level: 2 },
+      { id: 'research-findings', title: 'Research Findings', level: 2 },
+      { id: 'tb500-vs-bpc157', title: 'TB-500 vs BPC-157', level: 2 },
+      { id: 'research-considerations', title: 'Research Considerations', level: 2 },
+      { id: 'conclusion', title: 'Conclusion', level: 2 },
+    ],
+    content: `
+      <h2 id="what-is-tb-500">What is TB-500?</h2>
+      <p>TB-500 is a synthetic peptide that represents a specific fragment of thymosin beta-4 (Tβ4), a naturally occurring 43-amino acid protein found in virtually all human and animal cells. The TB-500 fragment corresponds to the active region of thymosin beta-4, specifically the amino acid sequence that is responsible for its actin-binding and cell migration properties.</p>
+      <p>First identified in the 1960s as a thymus-derived factor, thymosin beta-4 has since been recognized as a ubiquitous intracellular protein with remarkable extracellular signaling capabilities. TB-500 captures the key functional domain of this protein in a form suitable for research applications.</p>
+
+      <h2 id="thymosin-beta-4">Understanding Thymosin Beta-4</h2>
+      <p>Thymosin beta-4 is one of the most abundant peptides in human cells, present at concentrations of 100-500 μM in most cell types. Despite its name suggesting thymic origin, Tβ4 is produced by nearly every cell in the body and plays fundamental roles in:</p>
+      <ul>
+        <li><strong>Actin Regulation:</strong> Tβ4 sequesters monomeric G-actin, regulating the polymerization of actin filaments essential for cell structure and movement</li>
+        <li><strong>Cell Migration:</strong> By modulating the cytoskeleton, Tβ4 promotes the migration of endothelial cells, keratinocytes, and other cell types</li>
+        <li><strong>Wound Healing:</strong> Released from platelets at injury sites, Tβ4 participates in the natural wound healing cascade</li>
+        <li><strong>Anti-inflammatory Effects:</strong> Research has demonstrated anti-inflammatory properties through multiple pathways</li>
+      </ul>
+      <p>The synthetic TB-500 peptide allows researchers to study these effects in controlled experimental settings.</p>
+
+      <h2 id="mechanisms-of-action">Mechanisms of Action</h2>
+      <p>TB-500's biological activities stem from several interconnected mechanisms:</p>
+      <h3>Actin-Binding Domain</h3>
+      <p>The core of TB-500's activity lies in its actin-binding sequence (amino acids 17-23 of full Tβ4). This LKKTETQ sequence enables the peptide to:</p>
+      <ul>
+        <li>Sequester G-actin monomers, regulating cytoskeletal dynamics</li>
+        <li>Promote cell motility through controlled actin polymerization</li>
+        <li>Influence cell shape changes necessary for migration</li>
+      </ul>
+      <h3>Angiogenesis Promotion</h3>
+      <p>Research has demonstrated that TB-500 promotes angiogenesis—the formation of new blood vessels. This occurs through:</p>
+      <ul>
+        <li>Upregulation of VEGF (vascular endothelial growth factor)</li>
+        <li>Enhanced endothelial cell migration and tube formation</li>
+        <li>Increased expression of angiogenic genes</li>
+      </ul>
+      <h3>Anti-inflammatory Pathways</h3>
+      <p>Studies have shown TB-500 may reduce inflammation by:</p>
+      <ul>
+        <li>Modulating cytokine expression</li>
+        <li>Reducing inflammatory cell infiltration</li>
+        <li>Promoting resolution of inflammatory responses</li>
+      </ul>
+
+      <h2 id="research-findings">Research Findings</h2>
+      <p>Preclinical research has explored TB-500 across multiple applications:</p>
+      <h3>Wound Healing</h3>
+      <p>Numerous studies have demonstrated accelerated wound healing in animal models. Research in rodent models showed:</p>
+      <ul>
+        <li>Faster wound closure rates compared to controls</li>
+        <li>Enhanced re-epithelialization of skin wounds</li>
+        <li>Improved angiogenesis at wound sites</li>
+        <li>Reduced scarring in some experimental models</li>
+      </ul>
+      <h3>Cardiac Research</h3>
+      <p>Thymosin beta-4 and TB-500 have been studied extensively in cardiac contexts:</p>
+      <ul>
+        <li>Cardioprotective effects in ischemia-reperfusion models</li>
+        <li>Promotion of cardiac progenitor cell migration</li>
+        <li>Reduced fibrosis following cardiac injury</li>
+        <li>Phase 1 and 2 clinical trials have explored Tβ4 in acute myocardial infarction patients</li>
+      </ul>
+      <h3>Corneal Healing</h3>
+      <p>Eye research has shown promising results:</p>
+      <ul>
+        <li>Accelerated corneal wound healing</li>
+        <li>Reduced corneal inflammation</li>
+        <li>RegeneRx Biopharmaceuticals has conducted clinical trials with a Tβ4-based eye drop</li>
+      </ul>
+      <h3>Neurological Research</h3>
+      <p>Emerging research suggests neuroprotective potential:</p>
+      <ul>
+        <li>Enhanced neural progenitor cell migration</li>
+        <li>Potential applications in stroke recovery models</li>
+        <li>Oligodendrocyte differentiation promotion in CNS repair studies</li>
+      </ul>
+
+      <h2 id="tb500-vs-bpc157">TB-500 vs BPC-157</h2>
+      <p>Both TB-500 and BPC-157 are popular subjects in regenerative research, but they differ in important ways:</p>
+      <h3>Origin and Structure</h3>
+      <ul>
+        <li><strong>TB-500:</strong> Derived from thymosin beta-4, a naturally occurring intracellular protein. 43 amino acids in the full sequence.</li>
+        <li><strong>BPC-157:</strong> Derived from body protection compound found in gastric juice. 15 amino acids.</li>
+      </ul>
+      <h3>Primary Mechanisms</h3>
+      <ul>
+        <li><strong>TB-500:</strong> Works primarily through actin regulation, promoting cell migration and angiogenesis. Systemic distribution.</li>
+        <li><strong>BPC-157:</strong> Works through multiple pathways including the nitric oxide system, growth factor modulation, and FAK-paxillin signaling. Notable gastrointestinal stability.</li>
+      </ul>
+      <h3>Research Applications</h3>
+      <ul>
+        <li><strong>TB-500:</strong> Often studied for soft tissue healing, cardiac protection, and systemic regenerative effects.</li>
+        <li><strong>BPC-157:</strong> Often studied for tendon/ligament healing, gastrointestinal protection, and localized tissue repair.</li>
+      </ul>
+      <p>Some researchers explore combinations of both peptides, though comparative studies are limited. Each has distinct mechanisms that may offer complementary effects in certain research contexts.</p>
+
+      <h2 id="research-considerations">Research Considerations</h2>
+      <p>For researchers interested in TB-500, several factors are important:</p>
+      <h3>Purity and Quality</h3>
+      <p>As with all research peptides, the quality of TB-500 significantly impacts experimental outcomes. Always source from reputable suppliers who provide:</p>
+      <ul>
+        <li>Certificates of Analysis (COAs) with HPLC purity data</li>
+        <li>Mass spectrometry confirmation of molecular weight</li>
+        <li>Batch-specific documentation</li>
+      </ul>
+      <h3>Stability and Storage</h3>
+      <p>TB-500 should be stored as a lyophilized powder at -20°C for long-term stability. Once reconstituted:</p>
+      <ul>
+        <li>Store at 2-8°C (refrigerated)</li>
+        <li>Use within 2-4 weeks for optimal activity</li>
+        <li>Avoid repeated freeze-thaw cycles</li>
+      </ul>
+      <h3>Solubility</h3>
+      <p>TB-500 is soluble in water and bacteriostatic water. For research applications, sterile saline or bacteriostatic water are commonly used as diluents.</p>
+
+      <h2 id="conclusion">Conclusion</h2>
+      <p>TB-500 represents a fascinating research tool for studying wound healing, tissue regeneration, and cellular migration. Its derivation from thymosin beta-4—a ubiquitous and fundamental cellular protein—provides a mechanistic basis for its observed effects in preclinical studies.</p>
+      <p>While clinical applications remain under investigation, the extensive preclinical literature on both TB-500 and its parent compound thymosin beta-4 has established a solid foundation for ongoing research. For investigators exploring regenerative medicine, tissue repair, or the basic science of cell migration and angiogenesis, TB-500 offers valuable research opportunities.</p>
+      <p>As with all research peptides, proper sourcing, handling, and experimental design are essential for obtaining meaningful, reproducible results.</p>
+    `,
+  },
 ];
 
 export const getArticleBySlug = (slug: string): Article | undefined => {

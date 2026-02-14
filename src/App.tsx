@@ -12,6 +12,7 @@ import QualityPage from './pages/QualityPage';
 import ShippingPage from './pages/ShippingPage';
 import PrivacyPage from './pages/PrivacyPage';
 import TermsPage from './pages/TermsPage';
+import FAQPage from './pages/FAQPage';
 
 function App() {
   return (
@@ -31,6 +32,7 @@ function App() {
               <Route path="/shipping" element={<ShippingPage />} />
               <Route path="/privacy" element={<PrivacyPage />} />
               <Route path="/terms" element={<TermsPage />} />
+              <Route path="/faq" element={<FAQPage />} />
             </Routes>
           </main>
           <Footer />
