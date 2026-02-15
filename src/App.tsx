@@ -16,6 +16,7 @@ import ShippingPage from './pages/ShippingPage';
 import PrivacyPage from './pages/PrivacyPage';
 import TermsPage from './pages/TermsPage';
 import FAQPage from './pages/FAQPage';
+import ReconstitutionCalculatorPage from './pages/ReconstitutionCalculatorPage';
 
 function App() {
   return (
@@ -39,6 +40,7 @@ function App() {
               <Route path="/privacy" element={<PrivacyPage />} />
               <Route path="/terms" element={<TermsPage />} />
               <Route path="/faq" element={<FAQPage />} />
+              <Route path="/calculator" element={<ReconstitutionCalculatorPage />} />
             </Routes>
           </main>
           <Footer />
