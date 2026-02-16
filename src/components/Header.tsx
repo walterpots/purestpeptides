@@ -22,6 +22,7 @@ const Header = () => {
     { path: '/', label: 'Home' },
     { path: '/peptides', label: 'Peptides' },
     { path: '/compare', label: 'Compare' },
+    { path: '/calculator', label: 'Calculator' },
     { path: '/blog', label: 'Resources' },
     { path: '/quality', label: 'Quality' },
     { path: '/coa-lookup', label: 'Verify COA' },

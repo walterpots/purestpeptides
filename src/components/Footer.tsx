@@ -102,6 +102,14 @@ const Footer = () => {
               </li>
               <li>
                 <Link
+                  to="/calculator"
+                  className="text-slate-400 hover:text-teal-400 transition-colors text-sm"
+                >
+                  Reconstitution Calculator
+                </Link>
+              </li>
+              <li>
+                <Link
                   to="/blog"
                   className="text-slate-400 hover:text-teal-400 transition-colors text-sm"
                 >
