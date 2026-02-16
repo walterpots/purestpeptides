@@ -580,7 +580,32 @@ const COALookupPage: React.FC = () => {
           </div>
         </section>
 
-        {/* CTA Section */}
+        {/* Shop CTA */}
+        <section className="py-12 md:py-16 print:hidden">
+          <div className="container mx-auto px-4">
+            <div className="max-w-3xl mx-auto bg-gradient-to-r from-teal-600 to-emerald-600 rounded-2xl p-8 text-center">
+              <h2 className="text-2xl font-bold text-white mb-3">
+                Verified Quality. Ready to Order?
+              </h2>
+              <p className="text-teal-100 mb-6">
+                Every batch is third-party tested. Shop research-grade peptides with confidence.
+              </p>
+              <a
+                href="https://peptidefoundry.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-white text-teal-700 font-bold rounded-lg hover:bg-teal-50 transition-all shadow-lg"
+              >
+                Shop at Peptide Foundry
+                <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </section>
+
+        {/* Support CTA */}
         <section className="py-12 md:py-16 print:hidden">
           <div className="container mx-auto px-4">
             <div className="max-w-3xl mx-auto bg-gradient-to-br from-slate-800/80 to-slate-900/80 border border-slate-700/50 rounded-2xl p-8 text-center">

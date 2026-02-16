@@ -48,7 +48,7 @@ export const peptides: Peptide[] = [
       storage: 'Store lyophilized at -20°C. Reconstituted solution stable at 2-8°C for up to 4 weeks.',
     },
     articleSlug: 'bpc-157-guide',
-    shopUrl: '/peptides/bpc-157',
+    shopUrl: 'https://peptidefoundry.com/peptides/bpc-157',
   },
   {
     slug: 'semaglutide',
@@ -79,7 +79,7 @@ export const peptides: Peptide[] = [
       storage: 'Store lyophilized at -20°C. Reconstituted solution stable at 2-8°C.',
     },
     articleSlug: 'glp-1-peptides-explained',
-    shopUrl: '/peptides/semaglutide',
+    shopUrl: 'https://peptidefoundry.com/peptides/semaglutide',
   },
   {
     slug: 'tirzepatide',
@@ -110,7 +110,7 @@ export const peptides: Peptide[] = [
       storage: 'Store lyophilized at -20°C. Reconstituted solution stable at 2-8°C.',
     },
     articleSlug: 'glp-1-peptides-explained',
-    shopUrl: '/peptides/tirzepatide',
+    shopUrl: 'https://peptidefoundry.com/peptides/tirzepatide',
   },
   {
     slug: 'tb-500',
@@ -142,7 +142,7 @@ export const peptides: Peptide[] = [
       storage: 'Store lyophilized at -20°C. Reconstituted solution stable at 2-8°C for 2-4 weeks.',
     },
     articleSlug: 'tb-500-guide',
-    shopUrl: '/peptides/tb-500',
+    shopUrl: 'https://peptidefoundry.com/peptides/tb-500',
   },
   {
     slug: 'cjc-1295',
@@ -172,7 +172,7 @@ export const peptides: Peptide[] = [
       halfLife: '30 minutes (without DAC); 6-8 days (with DAC)',
       storage: 'Store lyophilized at -20°C. Reconstituted solution stable at 2-8°C.',
     },
-    shopUrl: '/peptides/cjc-1295',
+    shopUrl: 'https://peptidefoundry.com/peptides/cjc-1295',
   },
   {
     slug: 'ipamorelin',
@@ -203,7 +203,7 @@ export const peptides: Peptide[] = [
       halfLife: 'Approximately 2 hours',
       storage: 'Store lyophilized at -20°C. Reconstituted solution stable at 2-8°C.',
     },
-    shopUrl: '/peptides/ipamorelin',
+    shopUrl: 'https://peptidefoundry.com/peptides/ipamorelin',
   },
   {
     slug: 'melanotan-ii',
@@ -234,7 +234,7 @@ export const peptides: Peptide[] = [
       halfLife: 'Approximately 1-2 hours',
       storage: 'Store lyophilized at -20°C protected from light. Reconstituted solution stable at 2-8°C.',
     },
-    shopUrl: '/peptides/melanotan-ii',
+    shopUrl: 'https://peptidefoundry.com/peptides/melanotan-ii',
   },
   {
     slug: 'pt-141',
@@ -265,7 +265,7 @@ export const peptides: Peptide[] = [
       halfLife: 'Approximately 2-4 hours',
       storage: 'Store lyophilized at -20°C. Reconstituted solution stable at 2-8°C.',
     },
-    shopUrl: '/peptides/pt-141',
+    shopUrl: 'https://peptidefoundry.com/peptides/pt-141',
   },
 ];
 
