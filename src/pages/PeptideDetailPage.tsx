@@ -344,6 +344,29 @@ export default function PeptideDetailPage() {
           </div>
         </section>
 
+        {/* Shop CTA */}
+        <section className="py-12 bg-gradient-to-r from-teal-600 to-emerald-600">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center">
+              <h2 className="font-display text-2xl text-white mb-3">
+                Ready to Order {peptide.name}?
+              </h2>
+              <p className="text-teal-100 mb-6 max-w-xl mx-auto">
+                Get research-grade {peptide.name} with verified purity and fast shipping from our trusted partner.
+              </p>
+              <a
+                href="https://peptidefoundry.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center px-8 py-4 bg-white text-teal-700 font-bold rounded-lg hover:bg-teal-50 transition-colors shadow-lg"
+              >
+                Shop at Peptide Foundry
+                <ChevronRightIcon className="h-5 w-5 ml-2" />
+              </a>
+            </div>
+          </div>
+        </section>
+
         {/* Related Article */}
         {relatedArticle && (
           <section className="py-16 bg-slate-50 border-t border-slate-100">
@@ -435,13 +458,15 @@ export default function PeptideDetailPage() {
                   <DocumentIcon className="h-5 w-5 mr-2" />
                   Our Quality Standards
                 </Link>
-                <Link
-                  to="/contact"
+                <a
+                  href="https://peptidefoundry.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="inline-flex items-center px-6 py-3 bg-teal-600 text-white font-semibold rounded-lg hover:bg-teal-700 transition-colors"
                 >
-                  Request a Quote
+                  Shop Peptide Foundry
                   <ChevronRightIcon className="h-5 w-5 ml-2" />
-                </Link>
+                </a>
               </div>
             </div>
           </div>

@@ -674,33 +674,29 @@ const ReconstitutionCalculatorPage = () => {
         </section>
 
         {/* CTA Section */}
-        <section className="py-16 bg-gradient-to-r from-navy-900 to-navy-800">
+        <section className="py-16 bg-gradient-to-r from-teal-600 to-emerald-600">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="text-3xl font-bold text-white mb-4">Ready to Start Your Research?</h2>
-            <p className="text-xl text-slate-300 mb-8 max-w-2xl mx-auto">
-              Browse our selection of research-grade peptides with certificates of analysis and third-party testing.
+            <p className="text-xl text-teal-100 mb-8 max-w-2xl mx-auto">
+              Get research-grade peptides with verified purity and fast shipping from our trusted partner.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
+              <a
+                href="https://peptidefoundry.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 bg-white text-teal-700 px-8 py-4 rounded-xl font-bold transition-colors hover:bg-teal-50 shadow-lg"
+              >
+                Shop at Peptide Foundry
+                <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                </svg>
+              </a>
               <Link
                 to="/peptides"
-                className="inline-flex items-center gap-2 bg-emerald-500 hover:bg-emerald-600 text-white px-8 py-4 rounded-xl font-semibold transition-colors"
-              >
-                View Peptides
-                <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                </svg>
-              </Link>
-              <Link
-                to="/coa-lookup"
                 className="inline-flex items-center gap-2 bg-white/10 hover:bg-white/20 text-white px-8 py-4 rounded-xl font-semibold transition-colors border border-white/20"
               >
-                Verify COA
-              </Link>
-              <Link
-                to="/quality"
-                className="inline-flex items-center gap-2 bg-white/10 hover:bg-white/20 text-white px-8 py-4 rounded-xl font-semibold transition-colors border border-white/20"
-              >
-                Our Testing Standards
+                Browse Research Guides
               </Link>
             </div>
           </div>
