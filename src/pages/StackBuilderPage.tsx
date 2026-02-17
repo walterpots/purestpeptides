@@ -1,7 +1,8 @@
 import { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { researchGoals, stacks, ResearchStack, StackPeptide } from '../data/stacks';
+import { researchGoals, stacks } from '../data/stacks';
+import type { StackPeptide } from '../data/stacks';
 
 const StackBuilderPage = () => {
   const [selectedGoal, setSelectedGoal] = useState<string | null>(null);
