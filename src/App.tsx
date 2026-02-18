@@ -18,6 +18,7 @@ import TermsPage from './pages/TermsPage';
 import FAQPage from './pages/FAQPage';
 import ReconstitutionCalculatorPage from './pages/ReconstitutionCalculatorPage';
 import ResearchLibraryPage from './pages/ResearchLibraryPage';
+import GoalFinderPage from './pages/GoalFinderPage';
 
 function App() {
   return (
@@ -43,6 +44,7 @@ function App() {
               <Route path="/faq" element={<FAQPage />} />
               <Route path="/calculator" element={<ReconstitutionCalculatorPage />} />
               <Route path="/research" element={<ResearchLibraryPage />} />
+              <Route path="/quiz" element={<GoalFinderPage />} />
             </Routes>
           </main>
           <Footer />

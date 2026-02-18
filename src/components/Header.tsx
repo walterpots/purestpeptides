@@ -29,6 +29,7 @@ const Header = () => {
     { path: '/coa-lookup', label: 'Verify COA' },
     { path: '/faq', label: 'FAQ' },
     { path: '/about', label: 'About' },
+    { path: '/quiz', label: 'Take the Quiz' },
     { path: '/contact', label: 'Contact' },
   ];
 
