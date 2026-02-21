@@ -19,6 +19,7 @@ import FAQPage from './pages/FAQPage';
 import ReconstitutionCalculatorPage from './pages/ReconstitutionCalculatorPage';
 import ResearchLibraryPage from './pages/ResearchLibraryPage';
 import ProtocolsPage from './pages/ProtocolsPage';
+import ScienceBioAlternativePage from './pages/ScienceBioAlternativePage';
 
 function App() {
   return (
@@ -45,6 +46,7 @@ function App() {
               <Route path="/calculator" element={<ReconstitutionCalculatorPage />} />
               <Route path="/research" element={<ResearchLibraryPage />} />
               <Route path="/protocols" element={<ProtocolsPage />} />
+              <Route path="/science-bio-alternative" element={<ScienceBioAlternativePage />} />
             </Routes>
           </main>
           <Footer />
