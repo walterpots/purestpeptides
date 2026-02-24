@@ -4,7 +4,7 @@ import Hero from '../components/Hero';
 import ArticleCard from '../components/ArticleCard';
 import CTA from '../components/CTA';
 import { articles } from '../data/articles';
-import { peptides } from '../data/peptides';
+import { peptides, corePeptides } from '../data/peptides';
 
 const HomePage = () => {
   const featuredPeptides = peptides.slice(0, 4);
@@ -179,6 +179,77 @@ const HomePage = () => {
                 />
               </svg>
             </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Shop Our Peptides Section */}
+      <section className="py-16 md:py-24 bg-white border-t border-slate-100">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center max-w-2xl mx-auto mb-12">
+            <span className="inline-block px-3 py-1 bg-teal-50 text-teal-700 text-sm font-medium rounded-full mb-4">
+              Shop Research Peptides
+            </span>
+            <h2 className="font-display text-3xl md:text-4xl text-navy-900 mb-4">
+              Shop Our Peptides
+            </h2>
+            <p className="text-slate-600">
+              Research-grade peptides with 99%+ purity, third-party COA, and fast shipping.
+            </p>
+          </div>
+
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {corePeptides.map((peptide) => (
+              <div
+                key={peptide.slug}
+                className="bg-white border border-slate-200 rounded-xl shadow-sm hover:shadow-md hover:border-teal-200 transition-all p-6 flex flex-col"
+              >
+                <div className="mb-3">
+                  <span className="inline-block px-2.5 py-1 bg-teal-50 text-teal-700 text-xs font-medium rounded-full">
+                    {peptide.category}
+                  </span>
+                </div>
+                <h3 className="font-display text-xl text-navy-900 mb-2">
+                  {peptide.name}
+                </h3>
+                <p className="text-sm text-slate-600 leading-relaxed mb-4 line-clamp-2">
+                  {peptide.description}
+                </p>
+                <div className="mb-4">
+                  <span className="text-2xl font-display text-navy-900">
+                    ${peptide.price}
+                  </span>
+                  {peptide.sizes?.[0] && (
+                    <span className="text-slate-500 text-sm ml-1">
+                      / {peptide.sizes[0].label}
+                    </span>
+                  )}
+                </div>
+                <div className="flex flex-wrap gap-2 mb-4">
+                  <span className="inline-flex items-center gap-1 px-2.5 py-1 bg-green-50 text-green-700 text-xs font-medium rounded-full">
+                    &#10003; In Stock
+                  </span>
+                  {peptide.coaAvailable && (
+                    <span className="inline-block px-2.5 py-1 bg-teal-50 text-teal-700 text-xs font-medium rounded-full">
+                      COA Available
+                    </span>
+                  )}
+                </div>
+                {peptide.purityMin != null && (
+                  <p className="text-xs text-slate-500 mb-4">
+                    {peptide.purityMin}%+ Purity
+                  </p>
+                )}
+                <div className="mt-auto">
+                  <Link
+                    to={`/peptides/${peptide.slug}`}
+                    className="inline-flex items-center gap-1 text-sm font-medium text-teal-600 hover:text-teal-700 transition-colors"
+                  >
+                    View Product &rarr;
+                  </Link>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
