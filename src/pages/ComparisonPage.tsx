@@ -50,8 +50,8 @@ const ComparisonPage = () => {
   useEffect(() => {
     const a = searchParams.get('a');
     const b = searchParams.get('b');
-    if (a) setPeptideA(findPeptide(a) || null);
-    if (b) setPeptideB(findPeptide(b) || null);
+    if (a) setPeptideA(findPeptide(a) || null); // eslint-disable-line react-hooks/set-state-in-effect
+    if (b) setPeptideB(findPeptide(b) || null); // eslint-disable-line react-hooks/set-state-in-effect
   }, [searchParams]);
 
   // Update URL when selections change

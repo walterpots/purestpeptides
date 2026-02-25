@@ -29,15 +29,6 @@ const COALookupPage: React.FC = () => {
   const [result, setResult] = useState<BatchCOA | null>(null);
   const [notFound, setNotFound] = useState(false);
 
-  // Check for batch param on load
-  useEffect(() => {
-    const batchParam = searchParams.get('batch');
-    if (batchParam) {
-      setSearchInput(batchParam);
-      performSearch(batchParam);
-    }
-  }, []);
-
   const performSearch = (batchNumber: string) => {
     const trimmed = batchNumber.trim();
     if (!trimmed) return;
@@ -55,6 +46,16 @@ const COALookupPage: React.FC = () => {
       setSearchParams({});
     }
   };
+
+  // Check for batch param on load
+  useEffect(() => {
+    const batchParam = searchParams.get('batch');
+    if (batchParam) {
+      setSearchInput(batchParam);
+      performSearch(batchParam);
+    }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault();
