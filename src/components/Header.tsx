@@ -25,6 +25,7 @@ const Header = () => {
     { path: '/compare', label: 'Compare' },
     { path: '/calculator', label: 'Calculator' },
     { path: '/research', label: 'Research' },
+    { path: '/protocols', label: 'Protocols' },
     { path: '/blog', label: 'Resources' },
     { path: '/quality', label: 'Quality' },
     { path: '/coa-lookup', label: 'Verify COA' },
