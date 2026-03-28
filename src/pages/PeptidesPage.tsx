@@ -1,8 +1,9 @@
+import { Link } from 'react-router-dom';
 import SEO from '../components/SEO';
 import Hero from '../components/Hero';
 import PeptideCard from '../components/PeptideCard';
 import CTA from '../components/CTA';
-import { peptides } from '../data/peptides';
+import { peptides, corePeptides } from '../data/peptides';
 
 const PeptidesPage = () => {
   // Group peptides by category
@@ -29,6 +30,87 @@ const PeptidesPage = () => {
         showCTA={false}
         backgroundVariant="minimal"
       />
+
+      {/* Shop Peptides */}
+      <section className="py-12 md:py-16 bg-navy-900">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-10">
+            <h2 className="font-display text-3xl text-white mb-3">
+              Research-Grade Peptides
+            </h2>
+            <p className="text-slate-300 text-base max-w-2xl mx-auto">
+              99%+ purity guaranteed. Every batch third-party tested with Certificate of Analysis. Fast domestic shipping.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {corePeptides.map((peptide) => (
+              <div
+                key={peptide.slug}
+                className="bg-navy-800 border border-navy-700 rounded-xl p-6 flex flex-col"
+              >
+                {/* Category badge */}
+                <div className="mb-3">
+                  <span className="inline-block text-xs font-medium text-teal-400 bg-teal-400/10 border border-teal-400/20 rounded-full px-3 py-1">
+                    {peptide.category}
+                  </span>
+                </div>
+
+                {/* Name */}
+                <h3 className="font-display text-xl text-white mb-2">
+                  {peptide.name}
+                </h3>
+
+                {/* One-line description */}
+                <p className="text-slate-300 text-sm leading-relaxed mb-4 line-clamp-2">
+                  {peptide.description}
+                </p>
+
+                {/* Badges row */}
+                <div className="flex flex-wrap gap-2 mb-5">
+                  {peptide.purityMin !== undefined && (
+                    <span className="inline-flex items-center gap-1 text-xs font-medium text-teal-300 bg-teal-900/40 border border-teal-700/50 rounded-full px-2.5 py-0.5">
+                      <svg className="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                      </svg>
+                      {peptide.purityMin}% Purity
+                    </span>
+                  )}
+                  {peptide.inStock && (
+                    <span className="inline-flex items-center gap-1 text-xs font-medium text-emerald-400 bg-emerald-900/50 border border-emerald-700/50 rounded-full px-2.5 py-0.5">
+                      <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 inline-block" />
+                      In Stock
+                    </span>
+                  )}
+                  {peptide.coaAvailable && (
+                    <span className="inline-flex items-center gap-1 text-xs font-medium text-slate-300 bg-slate-700/50 border border-slate-600/50 rounded-full px-2.5 py-0.5">
+                      COA
+                    </span>
+                  )}
+                </div>
+
+                {/* Spacer to push price + button to bottom */}
+                <div className="mt-auto">
+                  {/* Price */}
+                  {peptide.sizes && peptide.sizes.length > 0 && (
+                    <p className="text-teal-300 font-semibold text-sm mb-4">
+                      From ${peptide.sizes[0].price}/{peptide.sizes[0].label}
+                    </p>
+                  )}
+
+                  {/* View Product button */}
+                  <Link
+                    to={`/peptides/${peptide.slug}`}
+                    className="block w-full text-center bg-teal-600 hover:bg-teal-500 text-white text-sm font-medium rounded-lg px-4 py-2.5 transition-colors duration-150"
+                  >
+                    View Product
+                  </Link>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
 
       {/* Overview Section */}
       <section className="py-12 bg-white border-b border-slate-200">

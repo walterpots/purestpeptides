@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { useParams, Link, Navigate } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import { getPeptideBySlug, peptides } from '../data/peptides';
@@ -71,6 +72,7 @@ const MagnifyingGlassIcon = ({ className }: { className?: string }) => (
 );
 
 export default function PeptideDetailPage() {
+  const [selectedSize, setSelectedSize] = useState<string>('');
   const { slug } = useParams<{ slug: string }>();
   const peptide = slug ? getPeptideBySlug(slug) : undefined;
 
@@ -127,7 +129,11 @@ export default function PeptideDetailPage() {
         <title>{peptide.name} Research Peptide | PurestPeptides</title>
         <meta
           name="description"
-          content={`${peptide.name} - ${peptide.description} High-purity research peptide with third-party testing and COA.`}
+          content={
+            peptide.price !== undefined
+              ? `Buy ${peptide.name} ${peptide.sizes?.[0]?.label ?? ''} for $${peptide.price} - ${peptide.purityMin ?? 99}%+ purity, COA verified research peptide. ${peptide.description}`
+              : `${peptide.name} - ${peptide.description} High-purity research peptide with third-party testing and COA.`
+          }
         />
         <meta
           name="keywords"
@@ -224,7 +230,94 @@ export default function PeptideDetailPage() {
                 </div>
               </div>
 
-              {/* Right: Molecular Info Card */}
+              {/* Right: Buy Box + Molecular Info Card */}
+              <div>
+              {/* Buy Box — shown only for core SKUs with pricing */}
+              {peptide.price !== undefined && (
+                <div className="rounded-2xl border border-teal-200 shadow-md overflow-hidden mb-4">
+                  {/* Header */}
+                  <div className="bg-gradient-to-r from-teal-600 to-teal-700 px-6 py-4">
+                    <h2 className="text-lg font-semibold text-white">Order Now</h2>
+                  </div>
+
+                  <div className="bg-white p-6 space-y-4">
+                    {/* Price + size label */}
+                    <div className="flex items-baseline gap-3">
+                      <span className="text-3xl font-bold text-navy-900">${peptide.price}</span>
+                      {peptide.sizes?.[0]?.label && (
+                        <span className="text-slate-500">{peptide.sizes[0].label}</span>
+                      )}
+                    </div>
+
+                    {/* Size selector */}
+                    {peptide.sizes && peptide.sizes.length > 0 && (
+                      <div>
+                        <label htmlFor="size-select" className="block text-sm font-medium text-slate-700 mb-1">
+                          Size
+                        </label>
+                        <select
+                          id="size-select"
+                          value={selectedSize || (peptide.sizes?.[0]?.sku ?? '')}
+                          onChange={(e) => setSelectedSize(e.target.value)}
+                          className="w-full border border-slate-300 rounded-lg px-3 py-2 text-slate-800 text-sm focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-teal-500"
+                        >
+                          {peptide.sizes.map((size) => (
+                            <option key={size.sku} value={size.sku}>
+                              {size.label} — ${size.price}
+                            </option>
+                          ))}
+                        </select>
+                      </div>
+                    )}
+
+                    {/* Badges row */}
+                    <div className="flex flex-wrap gap-2">
+                      {peptide.purityMin !== undefined && (
+                        <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-teal-50 text-teal-700 border border-teal-200">
+                          {peptide.purityMin}%+ Purity Guaranteed
+                        </span>
+                      )}
+                      {peptide.inStock === true && (
+                        <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-green-50 text-green-700 border border-green-200">
+                          <CheckCircleIcon className="h-3.5 w-3.5 mr-1" />
+                          In Stock
+                        </span>
+                      )}
+                      {peptide.inStock === false && (
+                        <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-red-50 text-red-700 border border-red-200">
+                          Out of Stock
+                        </span>
+                      )}
+                    </div>
+
+                    {/* COA row */}
+                    {peptide.coaAvailable === true && (
+                      <div className="flex items-center text-sm text-slate-600">
+                        <CheckCircleIcon className="h-4 w-4 text-teal-600 mr-2 shrink-0" />
+                        COA Available — Third-party tested
+                      </div>
+                    )}
+
+                    {/* Add to Cart button */}
+                    <button
+                      type="button"
+                      onClick={() => alert('Coming soon! Email orders@purestpeptides.com')}
+                      className="w-full bg-teal-600 hover:bg-teal-700 text-white font-bold py-3 px-6 rounded-lg transition-colors"
+                    >
+                      Add to Cart
+                    </button>
+
+                    {/* View COA link */}
+                    <div className="text-center">
+                      <Link to="/coa-lookup" className="text-sm text-teal-600 underline hover:text-teal-700">
+                        View Certificate of Analysis →
+                      </Link>
+                    </div>
+                  </div>
+                </div>
+              )}
+
+              {/* Molecular Info Card */}
               <div className="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden">
                 <div className="bg-gradient-to-r from-navy-800 to-navy-900 px-6 py-4">
                   <h2 className="text-lg font-semibold text-white flex items-center">
@@ -286,6 +379,7 @@ export default function PeptideDetailPage() {
                     </div>
                   )}
                 </div>
+              </div>
               </div>
             </div>
           </div>

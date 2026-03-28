@@ -1,3 +1,9 @@
+export interface PeptideSize {
+  label: string;
+  price: number;
+  sku: string;
+}
+
 export interface Peptide {
   slug: string;
   name: string;
@@ -15,6 +21,12 @@ export interface Peptide {
   };
   articleSlug?: string;
   shopUrl: string;
+  // Commerce fields
+  price?: number;
+  sizes?: PeptideSize[];
+  inStock?: boolean;
+  coaAvailable?: boolean;
+  purityMin?: number;
 }
 
 export const peptides: Peptide[] = [
@@ -49,6 +61,11 @@ export const peptides: Peptide[] = [
     },
     articleSlug: 'bpc-157-guide',
     shopUrl: 'https://peptidefoundry.com/peptides/bpc-157',
+    price: 55,
+    sizes: [{ label: '5mg', price: 55, sku: 'PP-BPC-5' }],
+    inStock: true,
+    coaAvailable: true,
+    purityMin: 99,
   },
   {
     slug: 'semaglutide',
@@ -143,10 +160,15 @@ export const peptides: Peptide[] = [
     },
     articleSlug: 'tb-500-guide',
     shopUrl: 'https://peptidefoundry.com/peptides/tb-500',
+    price: 65,
+    sizes: [{ label: '5mg', price: 65, sku: 'PP-TB5-5' }],
+    inStock: true,
+    coaAvailable: true,
+    purityMin: 99,
   },
   {
     slug: 'cjc-1295',
-    name: 'CJC-1295',
+    name: 'CJC-1295 DAC',
     category: 'Growth Hormone',
     description:
       'A synthetic growth hormone releasing hormone (GHRH) analog that stimulates GH release from the pituitary. Often studied with or without DAC modification.',
@@ -173,6 +195,11 @@ export const peptides: Peptide[] = [
       storage: 'Store lyophilized at -20°C. Reconstituted solution stable at 2-8°C.',
     },
     shopUrl: 'https://peptidefoundry.com/peptides/cjc-1295',
+    price: 65,
+    sizes: [{ label: '2mg', price: 65, sku: 'PP-CJC-2' }],
+    inStock: true,
+    coaAvailable: true,
+    purityMin: 98,
   },
   {
     slug: 'ipamorelin',
@@ -204,6 +231,48 @@ export const peptides: Peptide[] = [
       storage: 'Store lyophilized at -20°C. Reconstituted solution stable at 2-8°C.',
     },
     shopUrl: 'https://peptidefoundry.com/peptides/ipamorelin',
+    price: 55,
+    sizes: [{ label: '5mg', price: 55, sku: 'PP-IPA-5' }],
+    inStock: true,
+    coaAvailable: true,
+    purityMin: 99,
+  },
+  {
+    slug: 'ghk-cu',
+    name: 'GHK-Cu',
+    category: 'Regenerative',
+    description:
+      'Copper peptide with powerful regenerative and anti-aging properties. Studied extensively for skin repair, collagen synthesis, wound healing, and hair follicle stimulation.',
+    longDescription:
+      'GHK-Cu (Glycyl-L-Histidyl-L-Lysine:Copper) is a naturally occurring copper complex found in human plasma, saliva, and urine. First isolated in 1973, GHK-Cu has become one of the most studied peptides in dermatology and regenerative medicine. It declines significantly with age — levels drop from ~200ng/mL at age 20 to ~80ng/mL by age 60 — correlating with reduced skin quality and healing capacity. GHK-Cu acts as a powerful biological signal for tissue remodeling, stimulating collagen and glycosaminoglycan synthesis while activating antioxidant defenses. Its unique copper-chelating structure allows it to donate copper ions to cuproenzymes essential for connective tissue formation.',
+    benefits: [
+      'Collagen and elastin synthesis research',
+      'Wound healing acceleration studies',
+      'Hair follicle stimulation research',
+      'Skin barrier repair investigations',
+      'Anti-inflammatory and antioxidant properties',
+    ],
+    mechanismOfAction:
+      'GHK-Cu operates through multiple pathways. It activates tissue remodeling by upregulating matrix metalloproteinases (MMPs) and their inhibitors (TIMPs) in a balanced fashion. The copper component activates cuproenzymes including lysyl oxidase, essential for crosslinking collagen and elastin. GHK-Cu stimulates decorin production, a proteoglycan that regulates TGF-beta1 and organizes collagen fibrils. Research shows it resets gene expression patterns of aging skin fibroblasts toward a younger phenotype, affecting over 4,000 human genes. It also activates the proteasome system for damaged protein removal and upregulates nerve growth factor for skin innervation.',
+    researchHighlights: [
+      'Stimulated collagen synthesis by 70% in human fibroblast cultures',
+      'Accelerated wound healing in multiple animal models',
+      'Hair follicle enlargement and growth stimulation in rodent studies',
+      'Reset 31.2% of genes altered in COPD toward healthy baseline in lung tissue research',
+      'Demonstrated anti-metastatic properties in cancer cell line studies',
+    ],
+    molecularInfo: {
+      sequence: 'Gly-His-Lys + Cu2+',
+      molecularWeight: '340.38 g/mol (free peptide)',
+      halfLife: 'Approximately 0.5-2 hours in plasma',
+      storage: 'Store lyophilized at -20°C. Protect from light. Reconstituted stable at 2-8°C for 2 weeks.',
+    },
+    shopUrl: 'https://peptidefoundry.com/peptides/ghk-cu',
+    price: 45,
+    sizes: [{ label: '50mg', price: 45, sku: 'PP-GHK-50' }],
+    inStock: true,
+    coaAvailable: true,
+    purityMin: 98,
   },
   {
     slug: 'melanotan-ii',
@@ -272,3 +341,8 @@ export const peptides: Peptide[] = [
 export const getPeptideBySlug = (slug: string): Peptide | undefined => {
   return peptides.find((peptide) => peptide.slug === slug);
 };
+
+/** The 5 core SKUs with pricing — used for featured product sections */
+export const CORE_SKUS = ['bpc-157', 'tb-500', 'cjc-1295', 'ipamorelin', 'ghk-cu'];
+
+export const corePeptides = peptides.filter((p) => CORE_SKUS.includes(p.slug));
